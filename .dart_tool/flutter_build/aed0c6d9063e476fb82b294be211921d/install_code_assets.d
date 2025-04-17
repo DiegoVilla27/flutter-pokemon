@@ -1,0 +1,1 @@
+ /Users/bxnny/Desktop/flutter-pokemon/.dart_tool/flutter_build/aed0c6d9063e476fb82b294be211921d/native_assets.json: 
