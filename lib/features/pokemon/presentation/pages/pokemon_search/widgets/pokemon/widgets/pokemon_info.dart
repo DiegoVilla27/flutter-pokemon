@@ -41,8 +41,8 @@ class PokemonInfo extends StatelessWidget {
         Row(
           spacing: 8.0,
           children: [
-            _itemStat("${pokemon.weight} kg"),
-            _itemStat("${pokemon.height} m"),
+            _itemStat("${pokemon.weight.toInt()}kg"),
+            _itemStat("${pokemon.height.toInt()}m"),
           ],
         ),
       ],
