@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pokemon/core/di/injection.dart';
+import 'package:flutter_pokemon/core/routes/routes_config.dart';
+import 'package:flutter_pokemon/core/theme/theme.dart';
 
-void main() {
+void main() async {
+  await initDI();
   runApp(const MyApp());
 }
 
@@ -9,12 +13,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const Text('Flutter Demo Home Page'),
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      title: 'Pokemon App',
+      theme: ThemeCustom().get(),
+      routerConfig: AppRoutes.router,
     );
   }
 }
