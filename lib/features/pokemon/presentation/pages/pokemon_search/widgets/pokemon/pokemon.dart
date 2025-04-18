@@ -57,8 +57,8 @@ class Pokemon extends StatelessWidget {
           right: 10,
           top: 10,
           child: Container(
-            width: 140,
-            height: 140,
+            width: 100,
+            height: 100,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: Colors.white.withAlpha(5),

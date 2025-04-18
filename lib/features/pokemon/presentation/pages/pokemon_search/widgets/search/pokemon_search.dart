@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pokemon/features/pokemon/domain/entities/pokemon_entity.dart';
 
+/// A widget that provides a search interface for filtering a list of Pokémon.
+/// 
+/// This widget allows users to filter Pokémon based on specific criteria and
+/// change the generation of Pokémon being displayed.
+/// 
+/// The [pokemonsAll] parameter is a list of all available Pokémon entities.
+/// The [onPokemonsFiltered] callback is triggered with the filtered list of Pokémon.
+/// The [changeGeneration] callback is used to change the current Pokémon generation.
 class PokemonSearch extends StatefulWidget {
   final List<PokemonEntity> pokemonsAll;
   final void Function(List<PokemonEntity>) onPokemonsFiltered;
@@ -88,58 +96,55 @@ class _PokemonSearchState extends State<PokemonSearch> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: Column(
-        spacing: 5.0,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                "Pokedex",
-                style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
-              ),
-              ElevatedButton(
-                style: ButtonStyle(elevation: WidgetStateProperty.all(4)),
-                onPressed: _onChangeGeneration,
-                child: Text(
-                  "Gen. ${(_generation == 1) ? '2' : '1'}",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    color: Colors.white,
-                  ),
+    return Column(
+      spacing: 5.0,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Text(
+              "Pokedex",
+              style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
+            ),
+            ElevatedButton(
+              style: ButtonStyle(elevation: WidgetStateProperty.all(4)),
+              onPressed: _onChangeGeneration,
+              child: Text(
+                "Gen. ${(_generation == 1) ? '2' : '1'}",
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  color: Colors.white,
                 ),
               ),
-            ],
-          ),
-          TextField(
-            controller: _controller,
-            decoration: InputDecoration(
-              contentPadding: const EdgeInsets.symmetric(vertical: 12.0),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8.0),
-              ),
-              label: const Text(
-                "Search Pokemon...",
-                style: TextStyle(fontWeight: FontWeight.w400),
-              ),
-              floatingLabelBehavior: FloatingLabelBehavior.never,
-              prefixIcon: const Padding(
-                padding: EdgeInsets.only(left: 2.0),
-                child: Icon(Icons.search),
-              ),
-              suffixIcon:
-                  _showCloseIcon
-                      ? IconButton(
-                        onPressed: _clearTextField,
-                        icon: const Icon(Icons.close, size: 15),
-                      )
-                      : null,
             ),
+          ],
+        ),
+        TextField(
+          controller: _controller,
+          decoration: InputDecoration(
+            contentPadding: const EdgeInsets.symmetric(vertical: 12.0),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+            label: const Text(
+              "Search Pokemon...",
+              style: TextStyle(fontWeight: FontWeight.w400),
+            ),
+            floatingLabelBehavior: FloatingLabelBehavior.never,
+            prefixIcon: const Padding(
+              padding: EdgeInsets.only(left: 2.0),
+              child: Icon(Icons.search),
+            ),
+            suffixIcon:
+                _showCloseIcon
+                    ? IconButton(
+                      onPressed: _clearTextField,
+                      icon: const Icon(Icons.close, size: 15),
+                    )
+                    : null,
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

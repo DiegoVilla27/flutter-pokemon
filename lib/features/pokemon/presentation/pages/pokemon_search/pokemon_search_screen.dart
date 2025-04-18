@@ -86,42 +86,38 @@ class _PokemonSearchScreenState extends State<PokemonSearchScreen> {
               )
               : null,
       body: SafeArea(
-        child: Column(
-          children: [
-            PokemonSearch(
-              pokemonsAll: _pokemons,
-              onPokemonsFiltered:
-                  (pokemons) => setState(() => _pokemonsFiltered = pokemons),
-              changeGeneration: (gen) => _loadPokemons(gen),
-            ),
-            Expanded(
-              child: SingleChildScrollView(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child:
-                      _isLoading
-                          ? const Center(child: CircularProgressIndicator())
-                          : SizedBox(
-                            height: MediaQuery.of(context).size.height,
-                            child: ListView.builder(
-                              controller: _controller,
-                              itemCount: _pokemonsFiltered.length,
-                              itemBuilder: (_, i) {
-                                return GestureDetector(
-                                  onTap:
-                                      () => context.pushNamed(
-                                        AppRoutesNamed.pokemonDetail,
-                                        extra: _pokemonsFiltered[i],
-                                      ),
-                                  child: Pokemon(pokemon: _pokemonsFiltered[i]),
-                                );
-                              },
-                            ),
-                          ),
-                ),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            spacing: 16.0,
+            children: [
+              PokemonSearch(
+                pokemonsAll: _pokemons,
+                onPokemonsFiltered:
+                    (pokemons) => setState(() => _pokemonsFiltered = pokemons),
+                changeGeneration: (gen) => _loadPokemons(gen),
               ),
-            ),
-          ],
+              Expanded(
+                child:
+                    _isLoading
+                        ? const Center(child: CircularProgressIndicator())
+                        : ListView.builder(
+                          controller: _controller,
+                          itemCount: _pokemonsFiltered.length,
+                          itemBuilder: (_, i) {
+                            return GestureDetector(
+                              onTap:
+                                  () => context.pushNamed(
+                                    AppRoutesNamed.pokemonDetail,
+                                    extra: _pokemonsFiltered[i],
+                                  ),
+                              child: Pokemon(pokemon: _pokemonsFiltered[i]),
+                            );
+                          },
+                        ),
+              ),
+            ],
+          ),
         ),
       ),
     );

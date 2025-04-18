@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		IU+B1cW/W/KMO/0s+54RhDsk0wE=
+		MRv0geduY5GvcpEIN63LlmXWc1g=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,19 +54,19 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		PqMTZnOi6ghm89GREBwAW3GDG6M=
+		Ya3CoEMEbVdaD993Po99lx9tZEo=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
-		lA7VrOwEHLSkApeOimsFdfovxkc=
+		ecZwmRsPWHGzSAoKq5JUYXRWdic=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		4ZnF9sCYZMdQHIQKIRRRIRAP1/s=
+		5nxD0gBLHnf22wUAEByBxFOx2+8=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
-		vKJkVIcw+LGHFnKJGwrQwCREv68=
+		AaqpcR6J7GFnI5ANnr9Z9kYawCw=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
@@ -75,6 +75,26 @@
 		<key>Frameworks/App.framework/flutter_assets/NativeAssetsManifest.json</key>
 		<data>
 		re4p7E8rPLLsN+wzaPN/+AVpXTY=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/fonts/montserrat/Montserrat-Bold.ttf</key>
+		<data>
+		zAEkirR69cCtCoEYD0Rpt4UNWkM=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/fonts/montserrat/Montserrat-Light.ttf</key>
+		<data>
+		uEDYmteju56SyeBOyGLToG9aO7U=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/fonts/montserrat/Montserrat-Regular.ttf</key>
+		<data>
+		DuJCtjNlgnWFqS7q18SWyDkf1Rs=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/fonts/montserrat/Montserrat-SemiBold.ttf</key>
+		<data>
+		2OQf0bvA7uFW1zH9teWzGeizblo=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/fonts/montserrat/Montserrat-Thin.ttf</key>
+		<data>
+		jZJIc/JqUzxlmkr73Jo6nufC3+M=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/icons/types-pokemon/bug.svg</key>
 		<data>
@@ -158,7 +178,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		B9Jemr5aRuXrMYdq9KLQSuX39ZQ=
+		xkXzgJsPdcjcj4aU3S4J19cVc0o=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -266,7 +286,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		h+UVDgT9mOtGX91QQVdn+qgjuUY=
+		urDxpcxlG5UGPDQuTTUeS6nXXHA=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -357,7 +377,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			a5+NT6enYISk+6W4VpJa8WcZip0aZBqBHcdx+l0AyCs=
+			HRmtsiScC93GCnHXQPtTFPP/38Euq1KbioDavPgEKyQ=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -371,28 +391,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			afgQ1JL2DhS/OZrhc/0tMP+GGlsKYr4Ykaw1IkKdMu0=
+			glRZGnNFkieausJ+MP9T6Hy0g8qo8AClYKuDQNvmyJo=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9Guufhj8oLwBSS0Xf8Jm0zy+Vsl+zdoCSksY7AXhU2w=
+			ltBrlr/e3m2LfcS88D9cH6PES6KLdJNykPUf41cmyQY=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f09oJA945GV1uHfLUFliHNySee6L2FP4nxtbuYzhF+s=
+			DRQvTBlKgtlwLkgM4YIswhrefeuI4BIXNk4FiHtLrZc=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zX4DZFvESy3Ue3y2JvUcTsv1Whl6t3JBYotHrBZfviE=
+			l2L247iGlbBAWBA9BUL3k88Sv21dUej2Rwf+mUu/1Rc=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
@@ -407,6 +427,41 @@
 			<key>hash2</key>
 			<data>
 			lUijHkoEgTXB2U+Rkyi/tirix7s8q5ZVfHlB2ql3dss=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/fonts/montserrat/Montserrat-Bold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qhanXZK2ltQZz9/dFzUrisxY7loErH6nqEPPGilL9p8=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/fonts/montserrat/Montserrat-Light.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/6A/uedeng9PJkdWZ8yB02Jc291sb/W8zYIrORXGfJk=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/fonts/montserrat/Montserrat-Regular.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MIt5XgwPd7XXAWqX5NE+Is0HIhkuj8lBlE346x1o/gI=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/fonts/montserrat/Montserrat-SemiBold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Y8redOjiO4bqX7HGBYw5Yva22eTosttGFbY+eHYDink=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/fonts/montserrat/Montserrat-Thin.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uSsrCQGzCaPOpElUJkq7DIhBqqIm6cWXMZChfJnhoPs=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/icons/types-pokemon/bug.svg</key>
@@ -553,7 +608,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zpPoqRzU8bj3OqXbCJpCD8SFDmzuVV22IFwZsLIc448=
+			nZJnT5TjsClDzqeUQTf38yAaEKwnWjxnfDKdf0nRjvU=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
