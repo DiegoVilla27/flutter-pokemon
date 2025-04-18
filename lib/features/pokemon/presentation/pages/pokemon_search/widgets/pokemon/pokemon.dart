@@ -3,25 +3,22 @@ import 'package:flutter_pokemon/features/pokemon/domain/entities/pokemon_entity.
 import 'package:flutter_pokemon/features/pokemon/presentation/pages/pokemon_search/widgets/pokemon/widgets/pokemon_info.dart';
 import 'package:flutter_pokemon/features/pokemon/presentation/pages/pokemon_search/widgets/pokemon/widgets/pokemon_types.dart';
 
-/// A widget that displays detailed information about a Pokémon.
+/// A stateless widget that displays a Pokémon's details with a gradient background.
 ///
-/// The `Pokemon` widget is a stateless widget that takes a `PokemonEntity`
-/// object as a parameter and displays its information, including its name,
-/// image, and types. The widget uses a gradient background that transitions
-/// from black to the Pokémon's specific color. It also includes a hero
-/// animation for the Pokémon's image.
-///
-/// The widget is composed of a `Container` with a gradient background,
-/// containing a `Column` with `PokemonInfo` and `PokemonTypes` widgets to
-/// display the Pokémon's details. The Pokémon's image is positioned above
-/// the container using a `Positioned` widget with a `Hero` animation.
+/// The `Pokemon` widget takes a `PokemonEntity` object and displays its
+/// information, including name, image, and types. It features a gradient
+/// background transitioning from black to the Pokémon's specific color.
+/// The widget includes a hero animation for the Pokémon's image, which is
+/// positioned above the container. The layout consists of a `Stack` with
+/// a `Container` for the background and a `Column` for displaying the
+/// `PokemonInfo` and `PokemonTypes` widgets.
 class Pokemon extends StatelessWidget {
   final PokemonEntity pokemon;
 
   const Pokemon({super.key, required this.pokemon});
 
   @override
-  Widget build(_) {
+  Widget build(BuildContext context) {
     Color pokemonColor = Color.fromRGBO(
       pokemon.color[0],
       pokemon.color[1],
@@ -41,11 +38,11 @@ class Pokemon extends StatelessWidget {
               colors: [Colors.black, pokemonColor],
               begin: Alignment.bottomCenter,
               end: Alignment.topCenter,
-              stops: [0.01, 1.0]
+              stops: [0.01, 1.0],
             ),
           ),
-          padding: EdgeInsets.all(16.0),
-          margin: EdgeInsets.only(bottom: 16.0),
+          padding: EdgeInsets.all(12.0),
+          margin: EdgeInsets.only(bottom: 12.0),
           alignment: Alignment.centerLeft,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,11 +54,27 @@ class Pokemon extends StatelessWidget {
           ),
         ),
         Positioned(
+          right: 10,
+          top: 10,
+          child: Container(
+            width: 140,
+            height: 140,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.white.withAlpha(5),
+            ),
+          ),
+        ),
+        Positioned(
           top: -20,
           right: 10,
           child: Hero(
             tag: pokemon.name,
-            child: Image.network(pokemon.image, fit: BoxFit.cover, width: 160)
+            child: Image.network(
+              pokemon.image,
+              fit: BoxFit.cover,
+              width: MediaQuery.of(context).size.width * 0.4,
+            ),
           ),
         ),
       ],

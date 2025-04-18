@@ -30,7 +30,7 @@ class PokemonTypes extends StatelessWidget {
 
   Container _itemType(String type) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
+      padding: EdgeInsets.symmetric(horizontal: 6.0, vertical: 3.0),
       decoration: BoxDecoration(
         color: Color(colorByType(type)),
         borderRadius: BorderRadius.circular(5.0),
@@ -38,8 +38,8 @@ class PokemonTypes extends StatelessWidget {
       child: Row(
         spacing: 5.0,
         children: [
-          SvgPicture.asset(iconByType(type), height: 16.0,),
-          Text(capitalizeWords(type), style: TextStyle(fontWeight: FontWeight.w700)),
+          SvgPicture.asset(iconByType(type), height: 14.0,),
+          Text(capitalizeWords(type), style: TextStyle(fontWeight: FontWeight.w600)),
         ],
       ),
     );

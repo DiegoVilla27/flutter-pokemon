@@ -24,8 +24,8 @@ class PokemonInfo extends StatelessWidget {
         Text(
           "#${pokemon.id.toString()}",
           style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 25.0,
+            fontWeight: FontWeight.w400,
+            fontSize: 20.0,
             color: Colors.black,
           ),
         ),
@@ -35,9 +35,16 @@ class PokemonInfo extends StatelessWidget {
             fontWeight: FontWeight.bold,
             fontSize: 28.0,
             color: Colors.white,
+            shadows: [
+              Shadow(
+                offset: Offset(3, 3), // Shadow shift
+                blurRadius: 4.0, // Blur
+                color: Colors.black.withAlpha(128), // Opacity color
+              ),
+            ],
           ),
         ),
-        SizedBox(height: 10.0),
+        SizedBox(height: 5.0),
         Row(
           spacing: 8.0,
           children: [
@@ -52,17 +59,17 @@ class PokemonInfo extends StatelessWidget {
   /// Creates a styled container widget displaying a text title.
   ///
   /// The container has padding, a semi-transparent black background,
-  /// and rounded corners. The text is styled with bold font weight.
+  /// and rounded corners. The text is styled with regular font weight.
   ///
   /// [title] is the text to be displayed inside the container.
   Container _itemStat(String title) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
+      padding: EdgeInsets.symmetric(horizontal: 6.0, vertical: 3.0),
       decoration: BoxDecoration(
         color: Colors.black54,
         borderRadius: BorderRadius.circular(5.0),
       ),
-      child: Text(title, style: TextStyle(fontWeight: FontWeight.w700)),
+      child: Text(title, style: TextStyle(fontWeight: FontWeight.w400)),
     );
   }
 }

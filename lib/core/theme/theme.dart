@@ -20,6 +20,7 @@ class ThemeCustom {
     return ThemeData(
       colorSchemeSeed: colorsTheme[selectedColor],
       brightness: Brightness.dark,
+      fontFamily: "Montserrat"
     );
   }
 }
