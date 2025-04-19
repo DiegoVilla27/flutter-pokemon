@@ -95,7 +95,7 @@ class _PokemonSearchState extends State<PokemonSearch> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(_) {
     return Column(
       spacing: 5.0,
       children: [

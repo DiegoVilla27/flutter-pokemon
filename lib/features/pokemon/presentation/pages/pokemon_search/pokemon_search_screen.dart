@@ -74,7 +74,7 @@ class _PokemonSearchScreenState extends State<PokemonSearchScreen> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(_) {
     return Scaffold(
       floatingActionButton:
           _showFAB
@@ -82,7 +82,8 @@ class _PokemonSearchScreenState extends State<PokemonSearchScreen> {
                 onPressed: () => scrollToTop(_controller),
                 mini: true,
                 backgroundColor: Colors.black,
-                child: Icon(Icons.arrow_drop_up),
+                heroTag: null,
+                child: Icon(Icons.keyboard_arrow_up),
               )
               : null,
       body: SafeArea(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pokemon/features/pokemon/domain/entities/pokemon_entity.dart';
-import 'package:flutter_pokemon/utils/capitalize/capitalize.dart';
+import 'package:flutter_pokemon/features/pokemon/presentation/pages/widgets/name/pokemon_name.dart';
 
 /// A widget that displays detailed information about a Pokémon.
 ///
@@ -29,21 +29,7 @@ class PokemonInfo extends StatelessWidget {
             color: Colors.black,
           ),
         ),
-        Text(
-          capitalizeWords(pokemon.name),
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 28.0,
-            color: Colors.white,
-            shadows: [
-              Shadow(
-                offset: Offset(3, 3), // Shadow shift
-                blurRadius: 4.0, // Blur
-                color: Colors.black.withAlpha(128), // Opacity color
-              ),
-            ],
-          ),
-        ),
+        PokemonName(name: pokemon.name),
         SizedBox(height: 5.0),
         Row(
           spacing: 8.0,

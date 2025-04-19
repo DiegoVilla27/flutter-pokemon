@@ -4,6 +4,12 @@ import 'package:flutter_pokemon/features/pokemon/data/repositories/pokemon_repos
 import 'package:flutter_pokemon/features/pokemon/domain/repositories/pokemon_repository.dart';
 import 'package:flutter_pokemon/features/pokemon/domain/use_cases/get_pokemons.dart';
 
+/// Initializes dependency injections for the Pokemon feature.
+/// 
+/// This function registers lazy singletons for the data source, repository,
+/// and use case related to Pokemon functionality. It ensures that the
+/// `PokemonApiDataSourceImpl`, `PokemonRepositoryImpl`, and `GetPokemonUseCase`
+/// are available for dependency injection throughout the application.
 Future<void> initPokemonInjections() async {
   // Data sources
   di.registerLazySingleton<PokemonApiDataSourceImpl>(

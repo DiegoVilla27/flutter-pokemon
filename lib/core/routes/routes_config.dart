@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_pokemon/core/routes/routes_names.dart';
 import 'package:flutter_pokemon/features/pokemon/domain/entities/pokemon_entity.dart';
 import 'package:flutter_pokemon/features/pokemon/presentation/pages/pokemon_detail/pokemon_detail_screen.dart';
@@ -23,9 +24,19 @@ class AppRoutes {
           GoRoute(
             name: AppRoutesNamed.pokemonDetail,
             path: 'detail',
-            builder: (_, GoRouterState state) {
+            pageBuilder: (_, GoRouterState state) {
               final pokemon = state.extra as PokemonEntity;
-              return PokemonDetailScreen(pokemon: pokemon);
+              return CustomTransitionPage(
+                child: PokemonDetailScreen(pokemon: pokemon),
+                transitionsBuilder: (
+                  context,
+                  animation,
+                  secondaryAnimation,
+                  child,
+                ) {
+                  return FadeTransition(opacity: animation, child: child);
+                },
+              );
             },
           ),
         ],

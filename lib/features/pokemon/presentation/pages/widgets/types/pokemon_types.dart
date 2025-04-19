@@ -6,23 +6,26 @@ import 'package:flutter_svg/svg.dart';
 
 /// A widget that displays a list of Pokémon types as styled containers.
 ///
-/// Each type is represented by a container with a background color and icon
-/// specific to the type. The type name is displayed in capitalized form with
-/// bold text.
+/// The `PokemonTypes` widget takes a list of Pokémon type strings and displays
+/// each type in a styled container with an icon and capitalized text. The
+/// alignment of the row can be customized using the `alignment` parameter.
 ///
-/// The widget takes a list of type strings and maps each to a styled container
-/// using the `_itemType` method.
-/// 
-/// This will display two containers, one for 'fire' and one for 'water', each
-/// with their respective colors and icons.
+/// The widget uses organization-specific utilities to determine the color and
+/// icon for each Pokémon type, ensuring consistent styling across the app.
+///
+/// Parameters:
+/// - `types`: A list of strings representing Pokémon types.
+/// - `mainAlignment`: Determines the alignment of the row containing the type widgets.
 class PokemonTypes extends StatelessWidget {
   final List<String> types;
+  final MainAxisAlignment mainAlignment;
 
-  const PokemonTypes({super.key, required this.types});
+  const PokemonTypes({super.key, required this.types, required this.mainAlignment});
 
   @override
   Widget build(_) {
     return Row(
+      mainAxisAlignment: mainAlignment,
       spacing: 8.0,
       children: types.map((type) => _itemType(type)).toList(),
     );
@@ -38,8 +41,11 @@ class PokemonTypes extends StatelessWidget {
       child: Row(
         spacing: 5.0,
         children: [
-          SvgPicture.asset(iconByType(type), height: 14.0,),
-          Text(capitalizeWords(type), style: TextStyle(fontWeight: FontWeight.w600)),
+          SvgPicture.asset(iconByType(type), height: 14.0),
+          Text(
+            capitalizeWords(type),
+            style: TextStyle(fontWeight: FontWeight.w600),
+          ),
         ],
       ),
     );

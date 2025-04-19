@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pokemon/features/pokemon/domain/entities/pokemon_entity.dart';
 import 'package:flutter_pokemon/features/pokemon/presentation/pages/pokemon_search/widgets/pokemon/widgets/pokemon_info.dart';
-import 'package:flutter_pokemon/features/pokemon/presentation/pages/pokemon_search/widgets/pokemon/widgets/pokemon_types.dart';
+import 'package:flutter_pokemon/features/pokemon/presentation/pages/widgets/image/pokemon_image.dart';
+import 'package:flutter_pokemon/features/pokemon/presentation/pages/widgets/types/pokemon_types.dart';
 
 /// A stateless widget that displays a Pokémon's details with a gradient background.
 ///
@@ -18,7 +19,7 @@ class Pokemon extends StatelessWidget {
   const Pokemon({super.key, required this.pokemon});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(_) {
     Color pokemonColor = Color.fromRGBO(
       pokemon.color[0],
       pokemon.color[1],
@@ -49,7 +50,10 @@ class Pokemon extends StatelessWidget {
             children: [
               PokemonInfo(pokemon: pokemon),
               SizedBox(height: 8.0),
-              PokemonTypes(types: pokemon.types),
+              PokemonTypes(
+                types: pokemon.types,
+                mainAlignment: MainAxisAlignment.start,
+              ),
             ],
           ),
         ),
@@ -68,13 +72,10 @@ class Pokemon extends StatelessWidget {
         Positioned(
           top: -20,
           right: 10,
-          child: Hero(
-            tag: pokemon.name,
-            child: Image.network(
-              pokemon.image,
-              fit: BoxFit.cover,
-              width: MediaQuery.of(context).size.width * 0.4,
-            ),
+          child: PokemonImage(
+            name: pokemon.name,
+            image: pokemon.image,
+            width: 0.4,
           ),
         ),
       ],
